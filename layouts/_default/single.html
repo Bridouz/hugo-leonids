@@ -1,23 +1,25 @@
+<!DOCTYPE html>
 {{ partial "head.html" . }}
-{{ partial "sidebar.html" . }}
-
-<a class="btn" href= "{{ .Site.BaseURL }}" >
-  Home
-</a>
-<div id="post">
-  <header class="post-header">
-    <h1 title="{{ .Title }}">{{ .Title }}</h1>
-    <span class="post-meta">
-      <span class="post-date">
-        {{ .Params.date }}
-      </span>
-    </span>
-
-  </header>
-
-  <article class="post-content">
-    {{ .Content }}
-  </article>
-</div>
-
-{{ partial "footer.html" . }}
+<html>
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        {{ partial "sidebar.html" }}
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <header class="post-header">
+        <h1 title="{{ .Title }}">{{ .Title }}</h1>
+        <div class="post-date">
+          {{ .Params.date }}
+        </div>
+        </header>
+        {{ .Content }}
+        {{ partial "footer.html" }}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
