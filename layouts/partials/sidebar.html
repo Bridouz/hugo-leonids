@@ -1,0 +1,14 @@
+<div class="cover-card table-cell table-middle">
+  <span class="author_job">{{ .Site.Params.title }}</span>
+  <span class="author_bio mbm">{{ .Site.Params.title }}</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="{{ .Site.BaseURL }}/">home</a>
+        <span>/</span>
+             {{ range .Data.Pages }}
+                {{ .Render "li"}}
+            {{ end }}
+    </ul>
+  </nav>
+</div>
