@@ -10,10 +10,9 @@
     </div>
     <div class="col s12 m9">
       <div class="post-listing">
-      <h1>{{ .Title }}</h1>
       {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-	<small>{{ .Params.dates }}</small>
+	<h2>{{ .Params.date }}</h2>
 	<div class="post-description">        
 	<p>{{ .Summary }}</p>
 	</div>
