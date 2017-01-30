@@ -1393,18 +1393,19 @@ ul.tag-cloud li a.post-tag {
     margin: 1em auto;
 }
 .post-listing {
+    text-align: justify;
     background-color: #fff;
     position: absolute;
     top: 400px;
     z-index: 233;
     width: 100%;
-    padding: 20px 20px 0;
+    padding: 50px 80px 0;
     -webkit-transform: translate3d(0, 0, 1px);
     transform: translate3d(0, 0, 1px);
 }
-@media only screen and (min-width: 600px) {
+@media (max-width: 920px) {
     .post-listing {
-        padding: 50px 30px 0;
+        padding: 20px 20px 0;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -1414,6 +1415,19 @@ ul.tag-cloud li a.post-tag {
         position: initial;
         top: 0;
     }
+}
+.post-toc {
+    background-color: #F5F5F5;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin: 1rem 4rem 4rem 2rem;
+    position: relative;
+    float: right;
+}
+.post-toc #TableOfContents {
+    float: right;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: .875rem;
 }
 .image-credit {
     float: right;
