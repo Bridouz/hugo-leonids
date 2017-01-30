@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 {{ partial "head.html" . }}
 <html>
-{{ partial "sidebar.html" . }}
 <body>
-  <p>Hugo says hello!</p>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+	{{ partial "sidebar.html" . }}
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+      <h1>{{ .Title }}</h1>
+      {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	<small>{{ .Params.dates }}</small>
+	<div class="post-description">        
+	<p>{{ .Summary }}</p>
+	</div>
+{{ end }}
+	{{ partial "footer.html" . }}
+      </div>
+    </div>
+  </div>
 </body>
-{{ partial "footer.html" . }}
 </html>
 
