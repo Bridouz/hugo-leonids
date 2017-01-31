@@ -1,26 +1,36 @@
-<!DOCTYPE html>
 {{ partial "head.html" . }}
-<html>
-<body>
-  <div class="row">
-    <div class="col s12 m3">
-      <div class="table cover">
-	{{ partial "sidebar.html" . }}
-      </div>
-    </div>
-    <div class="col s12 m9">
-      <div class="post-listing">
-      {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-	<h2>{{ .Params.date }}</h2>
-	<div class="post-description">        
-	<p>{{ .Summary }}</p>
-      </div>
-{{ end }}
-	{{ partial "footer.html" . }}
-      </div>
+<div class="row">
+  <div class="col s12 m3">
+    <div class="table cover">
+      {{ partial "sidebar.html" . }}
     </div>
   </div>
-</body>
-</html>
-
+  <div class="col s12 m9">
+    <div class="post-listing">
+      <section class="post">
+        {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
+        <p class="post-meta">
+          <span class="post-date">
+            {{ .Date.Format "2 January , 2006" }}
+            •
+            {{ range .Params.categories }}
+            <a class="post-cat" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+            •
+            {{ range .Params.tags }}
+            <a class="post-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </span>
+        </p>
+        <h4><a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a>
+        </h4>
+	<div class="post-description">        
+	  {{ .Summary }}
+        </div>
+        {{ end }}
+      </section>
+    </div>
+  </div>
+</div>
+{{ partial "pagination.html" . }}
+{{ partial "footer.html" . }}

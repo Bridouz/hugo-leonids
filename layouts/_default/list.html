@@ -1,14 +1,15 @@
-    {{ partial "head.html" . }}
-    {{ partial "sidebar.html" . }}
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
 <section class="post">
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
-        {{ .Params.date }}
+        {{ .Date.Format "2 January , 2006" }}
       </span>
     </p>
     <h4>
       <a href="{{ .Permalink }}" class="post-title" title="{{ .Title }}">{{ .Title }}</a>
     </h4>
 </section>
-{% endfor %}
+{{ partial "footer.html" . }}
+

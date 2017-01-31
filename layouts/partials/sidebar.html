@@ -1,15 +1,17 @@
 <div class="cover-card table-cell table-middle">
-  <span class="author_job">{{ .Site.Params.AuthorJob }}</span>
-  <span class="author_bio mbm">{{ .Site.Params.AuthorBio }}</span>
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="{{ .Site.BaseURL }}/">home</a>
-        <span>/</span>
-      </li>
-      <li class="nav-item"></a>
-          <span>/</span>
-      </li>
-    </ul>
-  </nav>
+    <img src="{{ .Site.BaseURL }}{{ .Site.Params.Avatar }}" class="avatar">
+    <a href="{{ .Site.BaseURL }}" class="author_name">{{ .Site.Title }}</a>
+    <span class="author_job">{{ .Site.Params.AuthorJob }}</span>
+    <span class="author_bio mbm">{{ .Site.Params.AuthorBio }}</span>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="{{ .Site.BaseURL }}">home</a>
+                <span>/</span>
+            </li>
+            <li class="nav-item">
+                <span>/</span>
+            </li>
+        </ul>
+    </nav>
 </div>

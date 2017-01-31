@@ -1089,7 +1089,6 @@ p {
 
 .btn {
     display: inline-block;
-    margin-bottom: 20px;
     padding: 8px 20px;
     font-size: 0.875em;
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1101,6 +1100,9 @@ p {
     border-color: #42b983;
     text-decoration: none !important;
     border-radius: 5px;
+}
+.btn #next {
+    float; right;
 }
 .btn:visited {
     color: #fff;
