@@ -31,6 +31,7 @@
 }
 .thumbnail {
   margin: auto;
+  width: 30%;
 }
 @media (max-width: 920px) {
     .posts {

@@ -10,10 +10,16 @@
       <a class="btn" href= "{{ .Site.BaseURL }}" >
       Home
       </a>
-      <header class="post-header">
-      <h4 title="{{ .Title }}"><a href="{{ .Permalink }}" title="{{ .Title }}" class="tag-group-title">{{ .Title }}</a></h1>
-      </header>
-{{ partial "pagination.html" . }}
+      <div class="tag-list">
+        <div class="tag-group">
+          <h5 id="link post" class="tag-group-title">{{ .Title }}</h5>
+        </div>
+        {{ range .Data.Pages }}
+        <article class="tag-item">
+      <li><small>{{ .Date.Format "2006/01/02" }}</small> • <a class="tag-item-title" href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+      </article>
+      </div>
 {{ partial "footer.html" . }}
     </div>
   </div>
