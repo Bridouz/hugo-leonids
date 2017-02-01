@@ -1421,14 +1421,14 @@ ul.tag-cloud li a.post-tag {
 .post-toc {
     background-color: #F5F5F5;
     border-radius: 0.25rem;
-    padding: 1rem;
-    margin: 1rem 4rem 4rem 2rem;
+    padding: .5rem;
+    margin: 1rem 2rem 1rem 2rem;
     position: relative;
     float: right;
 }
 .post-toc #TableOfContents {
     float: right;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: .1rem 1rem .2rem .1rem;
     font-size: .875rem;
 }
 .image-credit {
