@@ -2,20 +2,20 @@
 # See https://github.com/spf13/hugoThemes#themetoml for an example
 
 name = "Leonids"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
+license = "GPL-3"
+licenselink = "https://github.com/bridouz/hugo-leonids/blob/master/LICENSE.md"
+description = "A simple and clean two columns Hugo theme (Ported from a Jekyll Theme) "
+source_repo = "https://github.com/bridouz/leonids"
+tags = ["leonids", "blog", "responsive", "lightbox"]
+features = ["lightbox", "blog"]
 min_version = 0.18
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Justin Bridouz"
+  homepage = "https://www.bloguslibrus.fr"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Leonids"
+  homepage = "https://renyuanz.github.io/leonids/"
+  repo = "https://github.com/renyuanz/leonids"
