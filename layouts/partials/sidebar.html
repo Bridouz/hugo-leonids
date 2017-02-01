@@ -16,4 +16,15 @@
             </li>
         </ul>
     </nav>
+  <div class="social-links">
+    <ul>
+     <li class="social-link-item">
+       {{ range .Site.Menus.social }}
+         {{if .URL }}
+           <li><a href="{{ .URL }}" target="_blank">{{ .Pre }}</a></li>
+         {{ end }}
+       {{ end }}
+     </li>
+    </ul>
+  </div>
 </div>
