@@ -1,15 +1,20 @@
 {{ partial "head.html" . }}
+<div class="row">
+  <div class="col s12 m3">
+    <div class="table cover">
 {{ partial "sidebar.html" . }}
-<section class="post">
-  <header class="post-header">
-    <p class="post-meta">
-      <span class="post-date">
-        {{ .Date.Format "2 January , 2006" }}
-      </span>
-    </p>
-    <h4>
-      <a href="{{ .Permalink }}" class="post-title" title="{{ .Title }}">{{ .Title }}</a>
-    </h4>
-</section>
+    </div>
+  </div>
+  <div class="col s12 m9">
+    <div class="post-listing">
+      <a class="btn" href= "{{ .Site.BaseURL }}" >
+      Home
+      </a>
+      <header class="post-header">
+      <h4 title="{{ .Title }}"><a href="{{ .Permalink }}" title="{{ .Title }}" class="tag-group-title">{{ .Title }}</a></h1>
+      </header>
+{{ partial "pagination.html" . }}
 {{ partial "footer.html" . }}
-
+    </div>
+  </div>
+</div>
