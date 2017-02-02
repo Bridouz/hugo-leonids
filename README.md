@@ -15,7 +15,7 @@ Leonids is a port of a [Jekyll Theme](https://github.com/renyuanz/leonids) to Hu
 It all started with the choosing of [Pure CSS Lightbox](http://youmightnotneedjs.com/#lightbox) for the main lightbox of Leonids. I tends to prefer Javascriptless websites on the Web. I created a simple shortcode for Hugo to simplify the writing :
 ```
 <p><a href="#{{ .Get "href" }}">
-  <img src="{{ .Get "src" }}" class="thumbnail"   width="{{ .Get "width" }}" alt="{{ .Get "alt" }}">
+  <img src="{{ .Get "src" }}" class="thumbnail" alt="{{ .Get "alt" }}">
 </a>
 <a href="#_" class="lightbox" id="{{ .Get "href" }}">
   <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
