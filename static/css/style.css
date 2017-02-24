@@ -316,6 +316,19 @@ img {
     height: auto;
     max-width: 100%;
 }
+.thumbnail {
+    width: 30%;
+    padding: 1rem;
+}
+.left {
+    float: left;
+}
+.center {
+    float: center;
+}
+.right {
+    float: right;
+}
 table,
 th,
 td {

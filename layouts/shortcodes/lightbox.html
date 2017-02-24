@@ -1,6 +1,2 @@
-<p><a href="#{{ .Get "href" }}">
-  <img src="{{ .Get "src" }}" class="thumbnail" alt="{{ .Get "alt" }}" align="{{ .Get "align" }}">
-</a>
-<a href="#_" class="lightbox" id="{{ .Get "href" }}">
-  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
-</a></p>
+<a href="/images/full/{{ .Get "src" }}" data-lity>
+<img class="thumbnail {{ .Get "align" }}" src="/images/thumbs/{{ .Get "src" }}" alt="{{ .Get "alt" }}"></a>
