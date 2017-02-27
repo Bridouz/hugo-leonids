@@ -1,0 +1,27 @@
+{{ partial "head.html" . }}
+<div class="row">
+  <div class="col s12 m3">
+    <div class="table cover">
+{{ partial "sidebar.html" . }}
+    </div>
+  </div>
+  <div class="col s12 m9">
+    <div class="post-listing">
+      <a class="btn" href= "{{ .Site.BaseURL }}" >
+      Home
+      </a>
+      <div class="tag-list">
+        <div class="tag-group">
+          <h5 id="link post" class="tag-group-title">{{ .Title }}</h5>
+        </div>
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <article class="tag-item">
+    <li><a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+  
+      {{ end }}
+      </article>
+      </div>
+{{ partial "footer.html" . }}
+    </div>
+  </div>
+</div>
