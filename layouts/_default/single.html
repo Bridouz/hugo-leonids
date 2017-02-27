@@ -32,8 +32,9 @@
         </span>
     </header>
       {{ .Content }}
+{{ partial "comments.html" . }}
+{{ partial "form.html" . }}
 {{ partial "footer.html" . }}
     </div>
   </div>
 </div>
-
