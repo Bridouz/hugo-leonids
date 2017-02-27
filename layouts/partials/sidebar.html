@@ -7,10 +7,10 @@
         <ul class="nav-list">
             <li class="nav-item">
                 <a href="{{ .Site.BaseURL }}">home</a>
-                <span>/</span>
             </li>
             {{ range .Site.Menus.main }}
             <li class="nav-item">
+            	<span>/</span>
                 <a href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
             </li>
