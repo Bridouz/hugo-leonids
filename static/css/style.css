@@ -611,6 +611,13 @@ pre code {
     display: inline-block;
     margin-left: 1em;
 }
+.social-links ul li a.social-link-item {
+    color: #8d7edc;
+}
+.social-links ul li a.social-link-item:hover,
+.social-links ul li a.social-link-item:focus {
+    color: #bfb6eb;
+}
 .nav-list {
     margin: 0;
     padding: 0;
