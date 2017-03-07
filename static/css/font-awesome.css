@@ -6,7 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
   font-weight: normal;
   font-style: normal;
 }
