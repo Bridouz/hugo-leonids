@@ -7,8 +7,8 @@
   </div>
   <div class="col s12 m9">
     <div class="post-listing">
-      <section class="post">
-        {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
+      {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
+      <section class="post">   
         <p class="post-meta">
           <span class="post-date">
             {{ .Date.Format "02 January , 2006" }}
@@ -27,8 +27,8 @@
 	<div class="post-description">        
 	  {{ .Summary }}
         </div>
-        {{ end }}
       </section>
+      {{ end }}
       {{ partial "pagination.html" . }}
       {{ partial "footer.html" . }}
     </div>

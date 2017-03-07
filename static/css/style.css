@@ -675,8 +675,8 @@ pre code {
     padding: .1rem 1rem .2rem .1rem;
     font-size: .875rem;
 }
-section.post {
-    margin-bottom: 80px;
+.post {
+    margin-bottom: 4rem;
 }
 .post-meta {
     font-size: 13px;
