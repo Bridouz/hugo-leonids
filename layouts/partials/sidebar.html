@@ -9,8 +9,8 @@
                 <a href="{{ .Site.BaseURL }}">home</a>
             </li>
             {{ range .Site.Menus.main }}
-            <span>/</span>
             <li class="nav-item">
+            	/
                 <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
             {{ end }}
