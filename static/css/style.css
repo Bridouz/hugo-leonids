@@ -725,3 +725,6 @@ pre code {
   margin-top: .2em;
   padding-left: 0.8em;
 }
+.antispam {
+  display:none;
+}
